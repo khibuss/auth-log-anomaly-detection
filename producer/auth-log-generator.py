@@ -7,9 +7,26 @@ from kafka import KafkaProducer
 REGULAR_USERS_MAP = {
     "alice": "10.0.0.1",
     "bob": "10.0.0.2",
+    "eric": "10.0.0.3",
+    "john": "10.0.0.4",
+    "mark": "10.0.0.5",
+    "stephen": "10.0.0.6",
+    "ted": "10.0.0.7",
+    "mike": "10.0.0.8",
+    "nade": "10.0.0.9",
+    "lucas": "10.0.0.10",
+    "anna": "10.0.0.11",
+    "paul": "10.0.0.12",
     "charlie": "192.168.1.10",
-    "david": "172.16.0.5"
+    "emma": "192.168.1.11",
+    "oliver": "192.168.1.12",
+    "sophia": "192.168.1.13",
+    "david": "172.16.0.5",
+    "kevin": "172.16.0.6",
+    "rachel": "172.16.0.7",
+    "linda": "172.16.0.8"
 }
+
 
 def generate_regular_log():
     #Generate a single authentication log event
