@@ -71,6 +71,18 @@ services:
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USERNAME: ${GRAFANA_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD}
+    ports:
+      - "3000:3000"
+    networks:
+      - database
+    depends_on:
+      - telegraf
+
 networks:
   kafka:
     driver: bridge
